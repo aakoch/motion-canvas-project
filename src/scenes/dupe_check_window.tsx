@@ -42,12 +42,6 @@ export default makeScene2D(function* (view) {
   const timeTxt = createRef<Txt>();
   const recordCircle = createRef<Circle>()
 
-  const timelineName = 'User';
-
-  // if any of the three were present and not failed
-  // select * from .... where top 3 not null
-  // enumerations: PRESENTED, BLACKLISTED, PASSED, FAILED, SKIPPED, NULL (not presented)
-
   view.add(
     <Rect ref={group1}
       layout
@@ -62,7 +56,7 @@ export default makeScene2D(function* (view) {
     >
       <Txt
         {...textStyle}
-      >{timelineName}</Txt>
+      >Incoming Feed</Txt>
       <Line
         ref={line1}
         stroke={FOREGROUND}
